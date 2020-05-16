@@ -1,3 +1,20 @@
+# blocklist for transmission
+This repo will help you do daily update blocklists, you can use `https://github.com/iYUYUE/ipfilter/releases/latest/download/blocklist.p2p.gz` in your setting.
+
+here's how to do settings.json:
+
+add to you settings.json
+```
+"blocklist-enabled": true,
+"blocklist-url": "https://github.com/iYUYUE/ipfilter/releases/latest/download/blocklist.p2p.gz",
+```
+
+verify by command:
+```
+$ transmission-remote -n admin:password --blocklist-update
+localhost:9091/transmission/rpc/ responded: "success"
+```
+
 # IP Filter Updater &amp; Generator
 Creates PeerGuardian (`.p2p`) blocklist from [I-Blocklist](https://www.iblocklist.com/) blocklists and [GeoLite2](https://dev.maxmind.com/geoip/geoip2/geolite2/) country blocks.
 
