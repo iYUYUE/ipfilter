@@ -6,6 +6,7 @@ script:
   - ./ipfilter.sh
 deploy:
   provider: releases
+  edge: true
   github_token: $GH_TOKEN
   file: blocklist.p2p
   skip_cleanup: true
